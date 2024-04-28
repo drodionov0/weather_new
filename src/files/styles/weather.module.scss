@@ -43,3 +43,14 @@
     transition: 0.8s;
 }
 
+.error{
+    background-color: rgb(187, 33, 33);
+    color: white;
+    height: auto;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.error p{
+    margin-left: 15px;
+}

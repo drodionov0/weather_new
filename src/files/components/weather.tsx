@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 
 const Weather = () => {
-    const [weatherData, setWeatherData] = useState(null);
+    const [weatherData, setWeatherData] = useState<any>(null);
     const [city, setCity] = useState('');
 
     const getWeather = async (e: any) => {
@@ -24,6 +24,11 @@ const Weather = () => {
                     <button className={styles.btn} onClick={getWeather}>🔎</button>
                 </form>
             </div>
+            { weatherData && weatherData.cod !== 200 && 
+                <div className={styles.error}>
+                    <p>Город не найден!</p>
+                </div>
+            }
         </div>
     );
 }
