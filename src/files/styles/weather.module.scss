@@ -83,3 +83,20 @@
     display: block;
     margin: 0 auto;
 }
+
+.header {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+}
+  
+.text{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 15px;
+}

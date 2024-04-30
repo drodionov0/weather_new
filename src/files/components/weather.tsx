@@ -17,6 +17,10 @@ const Weather = () => {
     }
 
     return(
+        <div>
+            <div className={styles.header}>
+                <div className={styles.text}>ПОГОДА</div>
+            </div>  
         <div className={styles.page}>
                 <div className={styles.oriental}>
                     <div className={styles.search}>
@@ -39,6 +43,7 @@ const Weather = () => {
                         </div>
                     }
                 </div>
+            </div>
             </div>
             
     );
