@@ -18,18 +18,29 @@ const Weather = () => {
 
     return(
         <div className={styles.page}>
-            <div className={styles.search}>
-                <form>
-                    <input placeholder='Введите город' className={styles.inp} onChange={e => setCity(e.target.value)}></input>
-                    <button className={styles.btn} onClick={getWeather}>🔎</button>
-                </form>
-            </div>
-            { weatherData && weatherData.cod !== 200 && 
-                <div className={styles.error}>
-                    <p>Город не найден!</p>
+                <div className={styles.oriental}>
+                    <div className={styles.search}>
+                        <form>
+                            <input placeholder='Введите город' className={styles.inp} onChange={e => setCity(e.target.value)}></input>
+                            <button className={styles.btn} onClick={getWeather}>🔎</button>
+                        </form>
+                    </div>
+                    { weatherData && weatherData.cod !== 200 && 
+                        <div className={styles.error}>
+                            <p>Город не найден!</p>
+                        </div>
+                    }
+
+                    { weatherData && weatherData.cod === 200 &&
+                        <div className={styles.weather}> 
+                            <img src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt='icon' className={styles.centered}></img>
+                            <p>Температура: {Math.round(weatherData.main.temp - 273)} °C</p>
+                            <p>Погода: {weatherData.weather[0].main}</p>
+                        </div>
+                    }
                 </div>
-            }
-        </div>
+            </div>
+            
     );
 }
 

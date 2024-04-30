@@ -47,10 +47,39 @@
     background-color: rgb(187, 33, 33);
     color: white;
     height: auto;
-    width: 150px;
+    width: 305px;
+    height: 28px;
     border-radius: 20px;
 }
 
 .error p{
     margin-left: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.oriental{
+    display: block;
+}
+
+.weather{
+    margin-top: 20px;
+    background-color: rgb(129, 129, 129);
+    border-radius: 20px;
+    height: 190px;
+}
+
+.weather img{
+    justify-content: center;
+    align-items: center;
+}
+
+.weather p{
+    margin-left: 10px;
+}
+
+.centered {
+    display: block;
+    margin: 0 auto;
 }
